@@ -1,0 +1,90 @@
+﻿<Window x:Class="BWFGscanner.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BWFGscanner"
+        mc:Ignorable="d"
+        Title="Scanner" Width="1920" Height="150
+        "
+        >
+
+    <Grid x:Name="LayoutRoot" Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Label Grid.Column="0" Grid.Row="0">Hips</Label>
+        <TextBlock x:Name="tB0" Grid.Column="0" Grid.Row="1" />
+        <Label Grid.Column="1" Grid.Row="0">LeftUpLeg</Label>
+        <TextBlock x:Name="tB1" Grid.Column="1" Grid.Row="1" />
+        <Label Grid.Column="2" Grid.Row="0">LeftLeg</Label>
+        <TextBlock x:Name="tB2" Grid.Column="2" Grid.Row="1" />
+        <Label Grid.Column="3" Grid.Row="0">LeftFoot</Label>
+        <TextBlock x:Name="tB3" Grid.Column="3" Grid.Row="1" />
+        <Label Grid.Column="4" Grid.Row="0">RightUpLeg</Label>
+        <TextBlock x:Name="tB4" Grid.Column="4" Grid.Row="1" />
+        <Label Grid.Column="5" Grid.Row="0">RightLeg</Label>
+        <TextBlock x:Name="tB5" Grid.Column="5" Grid.Row="1" />
+        <Label Grid.Column="6" Grid.Row="0">RightFoot</Label>
+        <TextBlock x:Name="tB6" Grid.Column="6" Grid.Row="1" />
+        <Label Grid.Column="7" Grid.Row="0">Spine</Label>
+        <TextBlock x:Name="tB7" Grid.Column="7" Grid.Row="1" />
+        <Label Grid.Column="8" Grid.Row="0">Head</Label>
+        <TextBlock x:Name="tB8" Grid.Column="8" Grid.Row="1" />
+        <Label Grid.Column="9" Grid.Row="0">LeftArm</Label>
+        <TextBlock x:Name="tB9" Grid.Column="9" Grid.Row="1" />
+        <Label Grid.Column="10" Grid.Row="0">LeftForeArm</Label>
+        <TextBlock x:Name="tB10" Grid.Column="10" Grid.Row="1" />
+        <Label Grid.Column="11" Grid.Row="0">LeftHand</Label>
+        <TextBlock x:Name="tB11" Grid.Column="11" Grid.Row="1" />
+        <Label Grid.Column="12" Grid.Row="0">RightArm</Label>
+        <TextBlock x:Name="tB12" Grid.Column="12" Grid.Row="1" />
+        <Label Grid.Column="13" Grid.Row="0">RightForeArm</Label>
+        <TextBlock x:Name="tB13" Grid.Column="13" Grid.Row="1" />
+        <Label Grid.Column="14" Grid.Row="0">RightHand</Label>
+        <TextBlock x:Name="tB14" Grid.Column="14" Grid.Row="1" />
+
+        <Button Grid.Column="0" Grid.Row="2">0</Button>
+        <Button Grid.Column="1" Grid.Row="2">1</Button>
+        <Button Grid.Column="2" Grid.Row="2">2</Button>
+        <Button Grid.Column="3" Grid.Row="2">3</Button>
+        <Button Grid.Column="4" Grid.Row="2">4</Button>
+        <Button Grid.Column="5" Grid.Row="2">5</Button>
+        <Button Grid.Column="6" Grid.Row="2">6</Button>
+        <Button Grid.Column="7" Grid.Row="2">7</Button>
+        <Button Grid.Column="8" Grid.Row="2">8</Button>
+        <Button Grid.Column="9" Grid.Row="2">9</Button>
+        <Button Grid.Column="10" Grid.Row="2">10</Button>
+        <Button Grid.Column="11" Grid.Row="2">11</Button>
+        <Button Grid.Column="12" Grid.Row="2">12</Button>
+        <Button Grid.Column="13" Grid.Row="2">13</Button>
+        <Button Grid.Column="14" Grid.Row="2">14</Button>
+        
+
+        <Button Grid.ColumnSpan="15" Grid.Row="3">15</Button>
+
+    </Grid>
+
+</Window>
+
+

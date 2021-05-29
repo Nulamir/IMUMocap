@@ -1,0 +1,223 @@
+_________________________________________________
+     Autodesk MotionBuilder
+
+           DEVICES
+
+ Open Reality SDK Sample Code
+_________________________________________________
+
+Overview
+-----------------------------------
+Devices are external sources of data that are sampled at a given 
+frequency to provide synchronous input to animate objects. The basic 
+functionality of a device is to be able to provide or receive this 
+synchronous data at a given frequency. This functionality can be used in 
+many contexts, but the most traditional is for doing motion capture to 
+animate a 3D model.
+
+Using the Open Reality SDK you can add new types of devices in the
+application, to receive data or output data to control an external device. 
+It is also possible to use the real-time synchronous calls to schedule 
+functionality in the application (such as the 'devicereclist' sample).
+
+There are essentially four types of devices:
+	- Input
+	- Output
+	- Optical
+	- Internal
+
+Input devices receive data from the hardware and use it to animate objects 
+in the scene. Output devices take data and write it out to external 
+devices in order to control them based on 3D models in the scene. Optical 
+devices are a particular type of input device that include optical data 
+(such as occlusion), and are a subset of input devices with specific tools 
+to deal with this type of data. Internal devices (such as the 'devicereclist' 
+sample) are device simulators that use the real-time synchronous nature of 
+the FBDevice class to perform special functions in MotionBuilder.
+
+In order to see the plugins:
+1. Build the sample plugins.
+2. Go to 'Devices' in the asset browser.
+3. Drag and drop to add a new device.
+
+The Open Reality devices appear in the navigator.
+
+
+_________________________________________________
+Plugin:		device_template
+-----------------------------------
+Function:	Template for devices.
+Description:
+	This device has no particular functionality, but shows the necessary 
+	functions that must be in place to create a new device in the scene. 
+	It provides a template for serial/network communications, as well 
+	as a simple simulator to move a marker based on a sinusodal input 
+	curve.
+	
+	In order to test this device:
+	1. Add the 'OR - Device Template' device (drag and drop).
+	2. Click the 'Communication' tab.
+	3. Select 'Simulator'.
+	4. Put the device 'Online'.
+	5. Create a new model binding.
+
+	A sinusodal curve now directs the movement of the wireframe marker.
+
+	NOTE: This device shows the usage of both serial and TCP communications 
+	using Open Reality.
+	
+_________________________________________________
+Plugin:		deviceglove
+-----------------------------------
+Function:	Glove device Template
+Description:
+	Template showing what needs to be done
+	in order to create a new glove device  
+	in the application.
+	
+	In order to test this device:
+	1. Add the 'OR - Camera Tracker Template' device (drag and drop).
+	2. Follow instructions in the device UI.
+_________________________________________________
+Plugin:		devicecamera
+-----------------------------------
+Function:	Camera Tracker Template
+Description:
+	Template showing what needs to be done
+	in order to create a new camera tracker
+	as a device in the application.
+	
+	In order to test this device:
+	1. Add the 'OR - Camera Tracker Template' device (drag and drop).
+	2. Click the 'Communication' tab.
+	3. Select 'Simulator'.
+	4. Put the device 'Online'.
+	5. Create a new model binding.
+	
+	You now have a camera driven by a camera tracker device.
+
+_________________________________________________
+Plugin:		deviceinput
+-----------------------------------
+Function:	Input device template.
+Description:
+	This device serves as an example for any generic motion capture 
+	device. This sample illustrates the use of dynamic allocation of 
+	animation nodes/sensors. The UI illustrates the use of a spreadsheet.
+
+_________________________________________________
+Plugin:		devicemocap
+-----------------------------------
+Function:	Simple Skeleton Device.
+Description:
+	This device serves as an example for any generic motion capture
+	device. This sample illustrates the use of dynamic allocation of
+	animation nodes/sensors. The UI illustrates the use of a spreadsheet.
+
+	Requires the Kinect for Windows SDK v1.x to be installed: https://www.microsoft.com/en-us/download/confirmation.aspx?id=40278
+
+	see ordevicemocap.cxx for more details.
+_________________________________________________
+Plugin:		deviceoptical
+-----------------------------------
+Function:	Optical device template.
+Description:
+	This optical device simulator is a template to create optical 
+	devices with Open Reality. The simulator creates a simple optical 
+	model with a few optical markers, and animates these markers based 
+	on an evaluation function. It also shows how the application handles 
+	occluded data and how rigid bodies are created using the SDK.
+
+	In order to test this device:
+	1. Add the 'OR - Optical Device Template' device (drag and drop).
+	2. Click 'Generate a new optical model'.
+
+	A series of four optical markers moves across the scene.
+	
+_________________________________________________	
+Plugin:		deviceopticalhybrid
+-----------------------------------
+Function:	Optical Hybrid device template.
+Description:
+	It's a combination of Optical and Skeleton device template.
+
+
+_________________________________________________
+Plugin:		deviceoutput
+-----------------------------------
+Function:	Output device template.
+Description:
+	This tutorial will cover the essentials of a simple output 
+	device, which will write out the position of a light to a file, 
+	simulating driving a lighting console with FiLMBOX.
+	
+_________________________________________________
+Plugin:		devicereclist
+-----------------------------------
+Function:	Recording playlist for take generation.
+Description:
+	This device is an example of an internal device, using the real-time 
+	synchronous callbacks in the FBDevice class in order to sequence a 
+	series of takes being recorded in one capture set.
+	
+	Using this device, it is possible to specify in and out times 
+	(based on the reference time) in order to split one capture into 
+	many different recorded takes.
+
+	In order to test this device:
+	1. Put at least one device in recording mode (mouse, etc.).
+	2. Add the 'OR - Recording List' device.
+	3. Click 'Load...'
+	4. Select the 'sample.txt' file in the 'devicereclist/res' directory
+	5. Put the device 'Online'.
+	6. Select 'Recording'.
+	7. Click 'StandBy'.
+	
+	The device tries to record the data in several takes based on the 
+	spreadsheet configuration.
+
+	Note: The IN/OUT marks are with respect to the Reference time, which 
+	may be the system time, in which case the times must be adjusted 
+	accordingly.
+
+	The data recorded in this session (once the times have both gone by) 
+	are split into the different takes, as specified in the spreadsheet.
+
+_________________________________________________
+Plugin:		deviceskeleton
+-----------------------------------
+Function:	Input skeleton device.
+Description:
+	This device serves as an example for skeleton motion capture 
+	device working on global data.
+
+_________________________________________________
+Plugin:		devicesync
+-----------------------------------
+Function:	Synchronous (genlocked) device.
+Description:
+	In a production studio, often many elements are connected together,
+	or synchronized, with respect to a given source. This is a template
+	device in order to integrate a device functioning with synchronization
+	constraints into the application. Note that the devicecamera sample is a
+	particular case of this type of device.
+
+_________________________________________________
+Plugin:		deviceTimeCode
+-----------------------------------
+Function:	TimeCode device.
+Description:
+	To be able to synchronize all the motion capture elements it is useful to 
+	have a common time reference.  This sample is based on the LTC device 
+	running at 24 FPS.
+
+_________________________________________________
+Plugin:		devicevideo
+-----------------------------------
+Function:	Video switcher
+Description:
+	This device creates a basic video switcher class in order to show how
+	to manipulate the FBVideo class in a real-time context.
+
+
+_________________________________________________

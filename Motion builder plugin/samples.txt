@@ -1,0 +1,152 @@
+______________________________
+  Autodesk MotionBuilder
+
+        OVERVIEW
+
+ Open Reality SDK Sample Code
+______________________________
+
+   Overview
+-----------------------------------
+This document gives a brief description of the different 
+pieces of sample code that are currently available in 
+Open Reality for MotionBuilder. In each sub-directory, 
+there are detailed descriptions of each plugin, showing
+where they fit into MotionBuilder and how to test them.
+
+Notes:
+
+1. Most of the Shader samples need CG to properly build.
+These samples have been moved to a separate solution
+(samples_cg_dependent.sln) so they can be built if GC is
+properly installed on the build machine.
+
+The projects are configured to use CG_INC_PATH and
+CG_LIB64_PATH environment variables to locate the CG files.
+
+2. The sample Miscellaneous/pyfbxsdk_template, because it 
+has a dependency on orcgshader, has also been placed in
+the samples_cg_dependent.sln
+
+
+
+   Boxes (boxes.txt)
+-----------------------------------
+box_template            - Box template.
+boxquaternion           - Quaternion-Rotation conversion boxes.
+boxsineramp             - Sine Ramp source box.
+boxtransport            - Connectors for timeline controls in a relations constraint.
+boxvector               - Vector to Number converter.
+
+
+   Constraints (constraints.txt)
+-----------------------------------
+constraint3Dcurvedeformer Deforms a 3D curve with models.
+constraint_template     - Constraint template.
+constraintdeformer      - Deformation constraint.
+HI2013Solver            - HumainIK 2013 Solver
+HI2014Solver            - HumainIK 2014 Solver
+constraintposition      - Positional constraint.
+CustomMarkerSolver	- Goal to skeleton solver.
+constraintextraction	- Goal extraction override constraint.
+
+   Devices (devices.txt)
+-----------------------------------
+device_template         - Device template.
+deviceglove             - Glove device.
+devicecamera            - Camera tracker device.
+deviceinput             - Simple input device example.
+devicemocap             - Simple Skeleton Device.
+deviceskeleton          - Skeleton device example.
+deviceoptical           - Optical device template.
+deviceopticalhybrid     - Optical hybrid device (with skeleton) template.
+deviceoutput            - Simulate driving a lighting console.
+devicereclist           - Recording playlist for take generation.
+devicesync              - Synchronous (genlocked) device.
+devicetimcode           - Timecode and time reference device.
+devicevideo             - Video switcher.
+
+
+   Filters (filters.txt)
+-----------------------------------
+filter_template         - Filter template.
+filterresample          - Resampling filter.
+
+
+   Import/Export (importexport.txt)
+-----------------------------------
+impexpcamera            - Import/Export of camera data.
+impexpdevice            - Export of sampled model data.
+impexpgames             - Export of a complete scene.
+impexpmenu              - Custom menu item template.
+impexpsample            - Sample import/export plugin.
+impexppropconversion    - Sample using the FBtoFBXProperty and FBXtoFBProperty functions.
+impexptool              - Import/Export tool.
+FBXExtension            - Filter FBX IO and custom reader/writer.
+FBXExtension-Surface    - Custom material replacement on import/export.
+
+
+   Manipulators (manipulators.txt)
+-----------------------------------
+manip_template          - Manipulator template.
+maniparrow              - Manipulator displaying an arrow next to the selected object.
+manipcamera             - Camera manipulator.
+
+
+   Miscellaneous (miscellaneous.txt)
+-----------------------------------
+command_template    	- Command template.
+custommanager_template  - Custom Manager template.
+hudelement_template	- HUDElement creation template.
+marker_template         - Marker creation template.
+material_template       - Material creation template.
+texture_template        - Layered Texture creation template.
+model_template          - Model creation template.
+popup_template          - Popup template.
+userobject_template     - Simple example showing the use of user objects.
+model_comp_sel_template - Example showing how to manage component selection for custom models.
+
+
+   Shaders (shaders.txt)
+-----------------------------------
+cgshader                - Simple use of a Cg shader.
+cgshaderfractal         - More complex Cg shader.
+shader_template         - Shader template.
+shaderscreen            - Renders triangles in screen coordinates at each vertex of a model.
+shadertexmat            - Texture/Material shader using OpenGL calls.
+DynamicLighting	        - Source code of the MotionBuilder dynamic lighting shader
+CustomRenderer          - Custom Renderer
+
+
+   Tools (tools.txt)
+-----------------------------------
+tool_template           - Tool template.
+toolaudio               - Template using audio media.
+toolbatch               - Plot multiple motion files on one character.
+toolcharacter           - Go through the steps for plotting motion data to a character.
+toolclipscene           - Tool list all story clips in the scene. When read-only animation clip is choosen it display all nodes from it's FbxSdk scene. (shows how to link and access FbxSdk elements)
+toolcluster             - Cluster tool template.
+toolconstraint          - Constraint tool template.
+toolconstraintrelation  - Shows how to create and populate a constraint relation.
+toolcustomtangent       - Shows how to register and use custom tangents.
+toolfcurveeditor        - Add external FCurves in a custom or default FCurve Editor. Show how to interact (property/curve/key selection) with the FCurve Editor.
+toolfcurveevent         - Track the changes on the curves of a property.
+toolgrabview3d          - Write the rendered 3D view into a file.
+toolimportexport        - Import and export different file formats.
+toolmaterial            - Affect material properties.
+toolmedia               - Media import/display tool.
+toolmirrorpose          - Mirror selected objects in the viewer.
+toolnote                - Insert notes in the scene.
+toolpath3d              - Create a 3d path and constraint a model to it.
+toolpathplot            - Plot a camera's path with models.
+toolpersistent          - Keep persistent data for a tool.
+toolplug                - This plugin reports on the connection of plugs within the system.
+toolpose                - Display loaded poses.
+toolscene               - Display the scene and its contents.
+toolskeleton            - Demonstration of the creation of a skeleton.
+toolstory               - Export of a story setup.
+tooluidemo              - Demonstrates the different UI elements available.
+tooluserdata            - Add user data to any model.
+toolview3d              - Show the scene in a 3D view.
+
+_________________________________________________

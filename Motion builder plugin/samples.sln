@@ -1,0 +1,33 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30523.141
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Devices", "Devices", "{DF0CB42B-8CBA-480D-A89E-34F0B65EBD53}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ordeviceskeleton", "devices\deviceskeleton\ordeviceskeleton.vcxproj", "{3FB485EF-73EB-4B56-95D4-D67AFD632022}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3FB485EF-73EB-4B56-95D4-D67AFD632022}.Debug|x64.ActiveCfg = Debug|x64
+		{3FB485EF-73EB-4B56-95D4-D67AFD632022}.Debug|x64.Build.0 = Debug|x64
+		{3FB485EF-73EB-4B56-95D4-D67AFD632022}.Debug|x86.ActiveCfg = Debug|x64
+		{3FB485EF-73EB-4B56-95D4-D67AFD632022}.Release|x64.ActiveCfg = Release|x64
+		{3FB485EF-73EB-4B56-95D4-D67AFD632022}.Release|x64.Build.0 = Release|x64
+		{3FB485EF-73EB-4B56-95D4-D67AFD632022}.Release|x86.ActiveCfg = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3FB485EF-73EB-4B56-95D4-D67AFD632022} = {DF0CB42B-8CBA-480D-A89E-34F0B65EBD53}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {55BEA338-4C91-4409-B3F9-4D017EFE1FC2}
+	EndGlobalSection
+EndGlobal
