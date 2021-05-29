@@ -11,4 +11,6 @@ My project consists of the following:
 4. Ordeviceskeleton read this data, use them to rotate and positioning bones
 
 
+![promo](https://user-images.githubusercontent.com/50498587/120082315-e56d3b80-c0ca-11eb-8b7f-8e5a20e0032e.jpg)
+
 
