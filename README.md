@@ -23,21 +23,27 @@ unswer
 Hi,
 IMU sensors generate quaternions and only rotation information, not position information.Autodesk Motion builder wait for euler angle and mdT (position of node)
 Wee need to convert this data
-Facts:1. Sensor initial state is start from lying on the table chip Z axis look in to roof. X and Y lying on the table. But on the motionbuilder model. Skeleton is faced to you. Z axis look on you.
-2 Sensor physical implementation (crafted hard device) a unified (they are all likes each on enover), But on you body you need to hang sensor on stomach legs head vertically, and in left side of body sensor hanged one method on right side another
+Facts:
+1. Sensor initial state is start from lying on the table chip Z axis look in to roof. X and Y lying on the table. But on the motionbuilder model. Skeleton is faced to you. Z axis look on you.
+
+2 zensor physical implementation (crafted hard device) a unified (they are all likes each on enover), But on you body you need to hang sensor on stomach legs head vertically, and in left side of body sensor hanged one method on right side another
+
 3 there is a little deviation then you hang sensors 10-15 degrees from strightly vertical or horizontal position 
 
 All calculation made in ordeviceskeleton_hardware.cxx ORDeviceSkeletonHardware::FetchDataPacket(FBTime& pTime)
 To get 1,2 Facts you need to remix and redirect axes of quaternion.
+
 cQuaternion.mValue[1] = mSkDataBuffer.mChannel[i].iR[0][0] * tempx + mSkDataBuffer.mChannel[i].iR[0][1] * tempy + mSkDataBuffer.mChannel[i].iR[0][2] * tempz; // -tempz
-			cQuaternion.mValue[2] = mSkDataBuffer.mChannel[i].iR[1][0] * tempx + mSkDataBuffer.mChannel[i].iR[1][1] * tempy + mSkDataBuffer.mChannel[i].iR[1][2] * tempz;//-tempx;
-			cQuaternion.mValue[3] = mSkDataBuffer.mChannel[i].iR[2][0] * tempx + mSkDataBuffer.mChannel[i].iR[2][1] * tempy + mSkDataBuffer.mChannel[i].iR[2][2] * tempz;//tempy;
+cQuaternion.mValue[2] = mSkDataBuffer.mChannel[i].iR[1][0] * tempx + mSkDataBuffer.mChannel[i].iR[1][1] * tempy + mSkDataBuffer.mChannel[i].iR[1][2] * tempz;//-tempx;
+cQuaternion.mValue[3] = mSkDataBuffer.mChannel[i].iR[2][0] * tempx + mSkDataBuffer.mChannel[i].iR[2][1] * tempy + mSkDataBuffer.mChannel[i].iR[2][2] * tempz;//tempy;
 
 Data for how to remix axes stored in ordeviceskeleton_hardware .h void SetupBuffer()
-in example of left foot^
-		mChannel[3].iR[0][0] = -1; mChannel[3].iR[0][1] = 0; mChannel[3].iR[0][2] = 0; x axis reversed
-		mChannel[3].iR[1][0] = 0; mChannel[3].iR[1][1] = 0; mChannel[3].iR[1][2] = 1;  y,z a swapped
-		mChannel[3].iR[2][0] = 0; mChannel[3].iR[2][1] = 1; mChannel[3].iR[2][2] = 0;  y,z a swapped
+
+in example of left foot
+
+mChannel[3].iR[0][0] = -1; mChannel[3].iR[0][1] = 0; mChannel[3].iR[0][2] = 0; x axis reversed
+mChannel[3].iR[1][0] = 0; mChannel[3].iR[1][1] = 0; mChannel[3].iR[1][2] = 1;  y,z a swapped
+mChannel[3].iR[2][0] = 0; mChannel[3].iR[2][1] = 1; mChannel[3].iR[2][2] = 0;  y,z a swapped
 Now you may hang your sensor on you comfort
 
 To get 3 Factyou need to multiply correction quaternion on sensor quaternion
